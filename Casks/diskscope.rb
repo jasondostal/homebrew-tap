@@ -1,6 +1,6 @@
 cask "diskscope" do
-  version "1.0.0"
-  sha256 "7c9f03a9c954e3a3e66cc8bb940e77a546198f1f9c760de84d798a821898f8b2"
+  version "1.0.1"
+  sha256 "f188e7868234619423924ec3cdb80c5479bd95f8469ea710ca20d28de1064f84"
 
   url "https://github.com/jasondostal/diskscope/releases/download/v#{version}/DiskScope-#{version}.dmg"
   name "DiskScope"
@@ -10,6 +10,8 @@ cask "diskscope" do
   depends_on macos: ">= :sonoma"
 
   app "DiskScope.app"
+  # The CLI/TUI bundled inside the app, exposed on PATH as `diskscope`.
+  binary "#{appdir}/DiskScope.app/Contents/MacOS/diskscope-scan", target: "diskscope"
 
   zap trash: [
     "~/Library/Preferences/com.witekdivers.DiskScope.plist",
