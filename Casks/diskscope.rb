@@ -1,6 +1,6 @@
 cask "diskscope" do
-  version "1.1.0"
-  sha256 "668247a2056654b2937145a88bb19dfc97548b463a15bf671a70a6f70536b0c1"
+  version "1.2.0"
+  sha256 "fab147294138a6bdc79198692d3f5f82e558185d399898dd0fb844ff14af992b"
 
   url "https://github.com/jasondostal/diskscope/releases/download/v#{version}/DiskScope-#{version}.dmg"
   name "DiskScope"
